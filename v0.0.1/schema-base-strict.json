@@ -51,9 +51,7 @@
                     "minLength": 4
                 },
                 "port": {
-                    "type": "integer",
-                    "minimum": 80,
-                    "maximum": 65534
+                    "type": "string"
                 }
             },
             "required": [

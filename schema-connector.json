@@ -249,8 +249,15 @@
                     "type": "object",
                     "properties": {
                         "cpu": {
-                            "type": "string",
-                            "pattern": "^(\\d+(\\.\\d+)?)(m)?$"
+                            "oneOf": [
+                                {
+                                    "type": "string",
+                                    "pattern": "^(\\d+(\\.\\d+)?)(m)?$"
+                                },
+                                {
+                                    "type": "number"
+                                }
+                            ]
                         },
                         "memory": {
                             "type": "string",
@@ -260,8 +267,15 @@
                             "type": "object",
                             "properties": {
                                 "cpu": {
-                                    "type": "string",
-                                    "pattern": "^(\\d+(\\.\\d+)?)(m)?$"
+                                    "oneOf": [
+                                        {
+                                            "type": "string",
+                                            "pattern": "^(\\d+(\\.\\d+)?)(m)?$"
+                                        },
+                                        {
+                                            "type": "number"
+                                        }
+                                    ]
                                 },
                                 "memory": {
                                     "type": "string",
@@ -285,10 +299,19 @@
                             "type": "object",
                             "properties": {
                                 "cpu": {
-                                    "type": "string"
+                                    "oneOf": [
+                                        {
+                                            "type": "string",
+                                            "pattern": "^(\\d+(\\.\\d+)?)(m)?$"
+                                        },
+                                        {
+                                            "type": "number"
+                                        }
+                                    ]
                                 },
                                 "memory": {
-                                    "type": "string"
+                                    "type": "string",
+                                    "pattern": "^(\\d+(\\.\\d+)?)([EPTGMK]i?)?$"
                                 }
                             },
                             "anyOf": [

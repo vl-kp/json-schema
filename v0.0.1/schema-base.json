@@ -49,10 +49,7 @@
                     "minimum": 80,
                     "maximum": 65534
                 }
-            },
-            "required": [
-                "repository"
-            ]
+            }
         },
         "workloadType": {
             "type": "string",

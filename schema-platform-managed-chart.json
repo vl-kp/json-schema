@@ -3,12 +3,12 @@
     "$id": "https://raw.githubusercontent.com/vl-kp/json-schema/main/base-platform-managed-chart.json",
     "title": "platform-managed-chart",
     "type": "object",
+    "required": [
+        "platform-managed-chart"
+    ],
     "properties": {
         "platform-managed-chart": {
-            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/base-api.json"
-        },
-        "required": [
-            "platform-managed-chart"
-        ]
+            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/schema-base.json"
+        }
     }
 }

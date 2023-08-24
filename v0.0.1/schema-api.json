@@ -371,9 +371,7 @@
             "type": "object",
             "properties": {
                 "port": {
-                    "type": "integer",
-                    "minimum": 80,
-                    "maximum": 65534
+                    "type": "string"
                 }
             }
         },

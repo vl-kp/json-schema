@@ -1,5 +1,5 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://raw.githubusercontent.com/vl-kp/json-schema/main/v0.0.1/schema-base.json",
     "type": "object",
     "required": [
@@ -9,6 +9,18 @@
         "workloadType"
     ],
     "properties": {
+        "api": {
+            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/v0.0.1/schema-api.json"
+        },
+        "frontend": {
+            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/v0.0.1/schema-api.json"
+        },
+        "stream": {
+            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/v0.0.1/schema-stream.json"
+        },
+        "connector": {
+            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/v0.0.1/schema-connector.json"
+        },
         "env": {
             "type": "string",
             "enum": [
@@ -57,18 +69,6 @@
                 "connector",
                 "cronjob"
             ]
-        },
-        "api": {
-            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/v0.0.1/schema-api.json"
-        },
-        "frontend": {
-            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/v0.0.1/schema-api.json"
-        },
-        "stream": {
-            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/v0.0.1/schema-stream.json"
-        },
-        "connector": {
-            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/v0.0.1/schema-connector.json"
         }
     },
     "allOf": [

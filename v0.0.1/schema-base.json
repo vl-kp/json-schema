@@ -1,0 +1,146 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/vl-kp/json-schema/main/schema-base.json",
+    "type": "object",
+    "required": [
+        "serviceName",
+        "teamOwner",
+        "image",
+        "workloadType"
+    ],
+    "properties": {
+        "env": {
+            "type": "string",
+            "enum": [
+                "dev",
+                "prod"
+            ]
+        },
+        "serviceName": {
+            "type": "string",
+            "minLength": 3
+        },
+        "teamOwner": {
+            "type": "string",
+            "minLength": 3
+        },
+        "image": {
+            "type": "object",
+            "properties": {
+                "registry": {
+                    "type": "string"
+                },
+                "repository": {
+                    "type": "string",
+                    "pattern": "^(dev|stable)/"
+                },
+                "tag": {
+                    "type": "string",
+                    "minLength": 4
+                },
+                "port": {
+                    "type": "integer",
+                    "minimum": 80,
+                    "maximum": 65534
+                }
+            },
+            "required": [
+                "repository"
+            ]
+        },
+        "workloadType": {
+            "type": "string",
+            "enum": [
+                "api",
+                "frontend",
+                "stream",
+                "connector",
+                "cronjob"
+            ]
+        },
+        "api": {
+            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/schema-api.json"
+        },
+        "frontend": {
+            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/schema-api.json"
+        },
+        "stream": {
+            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/schema-stream.json"
+        },
+        "connector": {
+            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/schema-connector.json"
+        }
+    },
+    "allOf": [
+        {
+            "if": {
+                "properties": {
+                    "workloadType": {
+                        "const": "api"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "api"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "workloadType": {
+                        "const": "frontend"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "frontend"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "workloadType": {
+                        "const": "stream"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "stream"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "workloadType": {
+                        "const": "connector"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "connector"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "workloadType": {
+                        "const": "cronjob"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "cronjob"
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/vl-kp/json-schema/main/v0.0.1/base-platform-managed-chart.json",
+    "title": "platform-managed-chart",
+    "type": "object",
+    "required": [
+        "platform-managed-chart"
+    ],
+    "properties": {
+        "platform-managed-chart": {
+            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/v0.0.1/schema-base-strict.json"
+        }
+    }
+}

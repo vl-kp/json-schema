@@ -1,0 +1,14 @@
+{
+  "ranges": [
+      {
+          "start": "0.0.0",
+          "end": "0.0.99",
+          "JSONSchemaVersion": "0.0.1"
+      },
+      {
+          "start": "0.1.0",
+          "end": "0.1.99",
+          "JSONSchemaVersion": "0.0.2"
+      }
+  ]
+}

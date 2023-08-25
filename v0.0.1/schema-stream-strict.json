@@ -330,8 +330,7 @@
                         }
                     },
                     "required": [
-                        "secretsManagerPath",
-                        "property"
+                        "secretsManagerPath"
                     ]
                 }
             },

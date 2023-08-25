@@ -362,7 +362,7 @@
         },
         "elasticsearchSecretPath": {
             "type": "string",
-            "pattern": "^k8s/"
+            "pattern": "^k8s/(dev|prod)/common/"
         },
         "topics": {
             "type": "object",

@@ -323,11 +323,16 @@
                     "type": "object",
                     "properties": {
                         "secretsManagerPath": {
+                            "type": "string",
+                            "pattern": "^k8s/(dev|prod)/common/"
+                        },
+                        "property": {
                             "type": "string"
                         }
                     },
                     "required": [
-                        "secretsManagerPath"
+                        "secretsManagerPath",
+                        "property"
                     ]
                 }
             },

@@ -311,10 +311,10 @@
                     },
                     "required": [
                         "value"
-                    ]
+                    ],
+                    "additionalProperties": false
                 }
-            },
-            "additionalProperties": false
+            }
         },
         "secrets": {
             "type": "object",
@@ -333,10 +333,10 @@
                     "required": [
                         "secretsManagerPath",
                         "property"
-                    ]
+                    ],
+                    "additionalProperties": false
                 }
-            },
-            "additionalProperties": false
+            }
         },
         "statefulSet": {
             "type": "object",

@@ -4,16 +4,16 @@
     "type": "object",
     "properties": {
         "api": {
-            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/v0.0.1/schema-api.json"
+            "$ref": "schema-api.json"
         },
         "frontend": {
-            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/v0.0.1/schema-api.json"
+            "$ref": "schema-api.json"
         },
         "stream": {
-            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/v0.0.1/schema-stream.json"
+            "$ref": "schema-stream.json"
         },
         "connector": {
-            "$ref": "https://raw.githubusercontent.com/vl-kp/json-schema/main/v0.0.1/schema-connector.json"
+            "$ref": "schema-connector.json"
         },
         "env": {
             "type": "string",

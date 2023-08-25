@@ -327,9 +327,6 @@
                     "properties": {
                         "secretsManagerPath": {
                             "type": "string"
-                        },
-                        "property": {
-                            "type": "string"
                         }
                     },
                     "required": [

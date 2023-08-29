@@ -43,7 +43,7 @@ jobs:
         if: steps.changed-files.outputs.any_changed == 'true'  
         run: |
           echo "One or more test file(s) has changed."
-          echo "List all the files that have changed: ${{ steps.changed-tf-files.outputs.all_changed_files }}"
+          echo "List all the files that have changed: ${{ steps.changed-files.outputs.all_changed_files }}"
 
 
       - name: List all changed files

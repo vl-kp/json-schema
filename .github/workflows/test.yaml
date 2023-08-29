@@ -18,4 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print event name
-        run: echo The event name is ${{ github.event_name }}
+        run: |
+          echo The event name is ${{ github.event_name }}
+          echo The branch is ${{ github.ref }}
+          echo The SHA is ${{ github.sha }}
+          echo This was a ${{ github.event.action }} event
